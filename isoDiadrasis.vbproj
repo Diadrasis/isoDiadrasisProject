@@ -1,0 +1,993 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C5CF3053-DA49-4337-84BD-0E8D757B66F1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>diadrasisProjects.My.MyApplication</StartupObject>
+    <RootNamespace>diadrasisProjects</RootNamespace>
+    <AssemblyName>diadrasisProjects</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <PublishUrl>E:\Projects\Διάδρασις\isoDiadrasis\installation\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://applications.diadrasis.net/Installations/isoDiadrasis/</InstallUrl>
+    <SupportUrl>http://www.diadrasis.gr/</SupportUrl>
+    <ErrorReportUrl>http://www.diadrasis.gr/</ErrorReportUrl>
+    <TargetCulture>el</TargetCulture>
+    <ProductName>Διάδρασις - Εφαρμογή Διαχείρισης ISO</ProductName>
+    <PublisherName>Διάδρασις - Υπηρεσίες Πληροφορικής</PublisherName>
+    <SuiteName>Διάδρασις</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>diadrasisProjects.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>diadrasisProjects.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9192C31D8A9EC90E7931B3CBD414010369998472</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>isoDiadrasis_2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmChooseProject.Designer.vb">
+      <DependentUpon>frmChooseProject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChooseProject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInvoiceData.Designer.vb">
+      <DependentUpon>frmInvoiceData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoiceData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInvoices.Designer.vb">
+      <DependentUpon>frmInvoices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTextbox.Designer.vb">
+      <DependentUpon>frmTextbox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTextbox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerSatisfactionSurveys.Designer.vb">
+      <DependentUpon>frmCustomerSatisfactionSurveys.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerSatisfactionSurveys.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerSatisfSurveyDetails.Designer.vb">
+      <DependentUpon>frmCustomerSatisfSurveyDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerSatisfSurveyDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEducation.Designer.vb">
+      <DependentUpon>frmEducation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEducation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExtDocuments.Designer.vb">
+      <DependentUpon>frmExtDocuments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmExtDocuments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInspectionReports.Designer.vb">
+      <DependentUpon>frmInspectionReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInspectionReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInspections.Designer.vb">
+      <DependentUpon>frmInspections.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInspections.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInspectionScedule.Designer.vb">
+      <DependentUpon>frmInspectionScedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInspectionScedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuManagement.Designer.vb">
+      <DependentUpon>frmMenuManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuProduction.Designer.vb">
+      <DependentUpon>frmMenuProduction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuProduction.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuQuality.Designer.vb">
+      <DependentUpon>frmMenuQuality.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuQuality.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuProcurments.Designer.vb">
+      <DependentUpon>frmMenuProcurments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuProcurments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuEvaluation.Designer.vb">
+      <DependentUpon>frmMenuEvaluation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuEvaluation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="diadrasisProjectsDBDataSet.vb">
+      <DependentUpon>diadrasisProjectsDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeEvaluationDetails.Designer.vb">
+      <DependentUpon>frmEmployeeEvaluationDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeEvaluationDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeEvaluations.Designer.vb">
+      <DependentUpon>frmEmployeeEvaluations.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeEvaluations.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuResources.Designer.vb">
+      <DependentUpon>frmMenuResources.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuResources.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuSales.Designer.vb">
+      <DependentUpon>frmMenuSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNonConformances.Designer.vb">
+      <DependentUpon>frmNonConformances.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNonConformances.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProjectStaff.Designer.vb">
+      <DependentUpon>frmProjectStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProjectStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQACustomerSatisfactionCriteria.Designer.vb">
+      <DependentUpon>frmQACustomerSatisfactionCriteria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQACustomerSatisfactionCriteria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQACustomerSatisfactionMarks.Designer.vb">
+      <DependentUpon>frmQACustomerSatisfactionMarks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQACustomerSatisfactionMarks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQAEmployeeEvaluationCritera.Designer.vb">
+      <DependentUpon>frmQAEmployeeEvaluationCritera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQAEmployeeEvaluationCritera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQAEmployeeEvaluationMarks.Designer.vb">
+      <DependentUpon>frmQAEmployeeEvaluationMarks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQAEmployeeEvaluationMarks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQASupplierSatisfactionCriteria.Designer.vb">
+      <DependentUpon>frmQASupplierSatisfactionCriteria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQASupplierSatisfactionCriteria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQASupplierSatisfactionMarks.Designer.vb">
+      <DependentUpon>frmQASupplierSatisfactionMarks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQASupplierSatisfactionMarks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRevisionComiteeMeetingRecommedations.Designer.vb">
+      <DependentUpon>frmRevisionComiteeMeetingRecommedations.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRevisionComiteeMeetingRecommedations.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRevisionComiteeMeetings.Designer.vb">
+      <DependentUpon>frmRevisionComiteeMeetings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRevisionComiteeMeetings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRevisionCommiteMeetingTopics.Designer.vb">
+      <DependentUpon>frmRevisionCommiteMeetingTopics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRevisionCommiteMeetingTopics.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupplierEvaluations.Designer.vb">
+      <DependentUpon>frmSupplierEvaluations.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupplierEvaluations.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrainningEmployees.Designer.vb">
+      <DependentUpon>frmTrainningEmployees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrainningEmployees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrainningProgrammes.Designer.vb">
+      <DependentUpon>frmTrainningProgrammes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrainningProgrammes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrainningProgrammeTrainees.Designer.vb">
+      <DependentUpon>frmTrainningProgrammeTrainees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrainningProgrammeTrainees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrainningTopics.Designer.vb">
+      <DependentUpon>frmTrainningTopics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrainningTopics.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManualPrinting.vb" />
+    <Compile Include="rptCustomerSatisfactionE841.Designer.vb">
+      <DependentUpon>rptCustomerSatisfactionE841.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptCustomerSatisfactionE841.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptCustomersE754.Designer.vb">
+      <DependentUpon>rptCustomersE754.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptCustomersE754.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptDocumentsE425.Designer.vb">
+      <DependentUpon>rptDocumentsE425.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptDocumentsE425.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="diadrasisProjectsDBDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>diadrasisProjectsDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmDocuments.Designer.vb">
+      <DependentUpon>frmDocuments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDocuments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReports.Designer.vb">
+      <DependentUpon>frmReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupplier.Designer.vb">
+      <DependentUpon>frmSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsers.Designer.vb">
+      <DependentUpon>frmUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modCommonSubs.vb" />
+    <Compile Include="frmChooseTheme.Designer.vb">
+      <DependentUpon>frmChooseTheme.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChooseTheme.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomer.Designer.vb">
+      <DependentUpon>frmCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.vb">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProject.Designer.vb">
+      <DependentUpon>frmProject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.vb">
+      <DependentUpon>frmSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaff.Designer.vb">
+      <DependentUpon>frmStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTask.Designer.vb">
+      <DependentUpon>frmTask.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTask.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTemplate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTemplate.Designer.vb">
+      <DependentUpon>frmTemplate.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modManageThemes.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="rptDocumentsE421.Designer.vb">
+      <DependentUpon>rptDocumentsE421.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptDocumentsE421.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptEmployeeEvaluationE623.Designer.vb">
+      <DependentUpon>rptEmployeeEvaluationE623.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptEmployeeEvaluationE623.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptEmployeeResumeE622.Designer.vb">
+      <DependentUpon>rptEmployeeResumeE622.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptEmployeeResumeE622.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptEmployeeTrainningE625.Designer.vb">
+      <DependentUpon>rptEmployeeTrainningE625.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptEmployeeTrainningE625.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptInspectionReportE822.Designer.vb">
+      <DependentUpon>rptInspectionReportE822.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptInspectionReportE822.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptInspectionSceduleE821.Designer.vb">
+      <DependentUpon>rptInspectionSceduleE821.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptInspectionSceduleE821.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptInvoice.Designer.vb">
+      <DependentUpon>rptInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptNonConformanceE831.Designer.vb">
+      <DependentUpon>rptNonConformanceE831.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptNonConformanceE831.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptProjectsE755.Designer.vb">
+      <DependentUpon>rptProjectsE755.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptProjectsE755.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptProjectTasksE752.Designer.vb">
+      <DependentUpon>rptProjectTasksE752.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptProjectTasksE752.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptRevisionCommiteeMeetingE561.Designer.vb">
+      <DependentUpon>rptRevisionCommiteeMeetingE561.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptRevisionCommiteeMeetingE561.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptSupplierEvaluationCriteriaE745.Designer.vb">
+      <DependentUpon>rptSupplierEvaluationCriteriaE745.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptSupplierEvaluationCriteriaE745.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptSupplierEvaluationSurveyE746.Designer.vb">
+      <DependentUpon>rptSupplierEvaluationSurveyE746.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptSupplierEvaluationSurveyE746.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptSuppliersE7427.Designer.vb">
+      <DependentUpon>rptSuppliersE7427.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptSuppliersE7427.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptTasksByProject.Designer.vb">
+      <DependentUpon>rptTasksByProject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptTasksByProject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptTrainningProgrammeE624.Designer.vb">
+      <DependentUpon>rptTrainningProgrammeE624.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptTrainningProgrammeE624.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="aaa.rdlc" />
+    <EmbeddedResource Include="frmChooseProject.resx">
+      <DependentUpon>frmChooseProject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerSatisfactionSurveys.resx">
+      <DependentUpon>frmCustomerSatisfactionSurveys.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerSatisfSurveyDetails.resx">
+      <DependentUpon>frmCustomerSatisfSurveyDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEducation.resx">
+      <DependentUpon>frmEducation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExtDocuments.resx">
+      <DependentUpon>frmExtDocuments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInspectionReports.resx">
+      <DependentUpon>frmInspectionReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInspections.resx">
+      <DependentUpon>frmInspections.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInspectionScedule.resx">
+      <DependentUpon>frmInspectionScedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoiceData.resx">
+      <DependentUpon>frmInvoiceData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoices.resx">
+      <DependentUpon>frmInvoices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuManagement.resx">
+      <DependentUpon>frmMenuManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuProduction.resx">
+      <DependentUpon>frmMenuProduction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuQuality.resx">
+      <DependentUpon>frmMenuQuality.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuProcurments.resx">
+      <DependentUpon>frmMenuProcurments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuEvaluation.resx">
+      <DependentUpon>frmMenuEvaluation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeEvaluationDetails.resx">
+      <DependentUpon>frmEmployeeEvaluationDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeEvaluations.resx">
+      <DependentUpon>frmEmployeeEvaluations.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuResources.resx">
+      <DependentUpon>frmMenuResources.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNonConformances.resx">
+      <DependentUpon>frmNonConformances.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProjectStaff.resx">
+      <DependentUpon>frmProjectStaff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQACustomerSatisfactionCriteria.resx">
+      <DependentUpon>frmQACustomerSatisfactionCriteria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQACustomerSatisfactionMarks.resx">
+      <DependentUpon>frmQACustomerSatisfactionMarks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQAEmployeeEvaluationCritera.resx">
+      <DependentUpon>frmQAEmployeeEvaluationCritera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQAEmployeeEvaluationMarks.resx">
+      <DependentUpon>frmQAEmployeeEvaluationMarks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQASupplierSatisfactionCriteria.resx">
+      <DependentUpon>frmQASupplierSatisfactionCriteria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQASupplierSatisfactionMarks.resx">
+      <DependentUpon>frmQASupplierSatisfactionMarks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRevisionComiteeMeetingRecommedations.resx">
+      <DependentUpon>frmRevisionComiteeMeetingRecommedations.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRevisionComiteeMeetings.resx">
+      <DependentUpon>frmRevisionComiteeMeetings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRevisionCommiteMeetingTopics.resx">
+      <DependentUpon>frmRevisionCommiteMeetingTopics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupplierEvaluations.resx">
+      <DependentUpon>frmSupplierEvaluations.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTextbox.resx">
+      <DependentUpon>frmTextbox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCustomerSatisfactionE841.rdlc" />
+    <EmbeddedResource Include="rptCustomerSatisfactionE841.resx">
+      <DependentUpon>rptCustomerSatisfactionE841.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCustomersE754.rdlc" />
+    <EmbeddedResource Include="rptCustomersE754.resx">
+      <DependentUpon>rptCustomersE754.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptInspectionReportE822.rdlc" />
+    <EmbeddedResource Include="rptInspectionReportE822.resx">
+      <DependentUpon>rptInspectionReportE822.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptInspectionSceduleE821.rdlc" />
+    <EmbeddedResource Include="rptInspectionSceduleE821.resx">
+      <DependentUpon>rptInspectionSceduleE821.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptInvoice.rdlc" />
+    <EmbeddedResource Include="rptInvoice.resx">
+      <DependentUpon>rptInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptNonConformanceE831.rdlc" />
+    <EmbeddedResource Include="rptNonConformanceE831.resx">
+      <DependentUpon>rptNonConformanceE831.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptProjectsE755.rdlc" />
+    <EmbeddedResource Include="rptProjectsE755.resx">
+      <DependentUpon>rptProjectsE755.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptProjectTasksE752.rdlc" />
+    <EmbeddedResource Include="rptProjectTasksE752.resx">
+      <DependentUpon>rptProjectTasksE752.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSupplierEvaluationSurveyE746.rdlc" />
+    <EmbeddedResource Include="frmTrainningEmployees.resx">
+      <DependentUpon>frmTrainningEmployees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrainningProgrammes.resx">
+      <DependentUpon>frmTrainningProgrammes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrainningProgrammeTrainees.resx">
+      <DependentUpon>frmTrainningProgrammeTrainees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrainningTopics.resx">
+      <DependentUpon>frmTrainningTopics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptEmployeeEvaluationE623.rdlc" />
+    <EmbeddedResource Include="rptDocumentsE425.resx">
+      <DependentUpon>rptDocumentsE425.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDocumentsE425.rdlc" />
+    <EmbeddedResource Include="frmChooseTheme.resx">
+      <DependentUpon>frmChooseTheme.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomer.resx">
+      <DependentUpon>frmCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDocuments.resx">
+      <DependentUpon>frmDocuments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProject.resx">
+      <DependentUpon>frmProject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReports.resx">
+      <DependentUpon>frmReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaff.resx">
+      <DependentUpon>frmStaff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupplier.resx">
+      <DependentUpon>frmSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTask.resx">
+      <DependentUpon>frmTask.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTemplate.resx">
+      <DependentUpon>frmTemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsers.resx">
+      <DependentUpon>frmUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDocumentsE421.rdlc" />
+    <EmbeddedResource Include="rptDocumentsE421.resx">
+      <DependentUpon>rptDocumentsE421.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptEmployeeEvaluationE623.resx">
+      <DependentUpon>rptEmployeeEvaluationE623.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptEmployeeResumeE622.rdlc" />
+    <EmbeddedResource Include="rptEmployeeResumeE622.resx">
+      <DependentUpon>rptEmployeeResumeE622.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptEmployeeTrainningE625.rdlc" />
+    <EmbeddedResource Include="rptEmployeeTrainningE625.resx">
+      <DependentUpon>rptEmployeeTrainningE625.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptRevisionCommiteeMeetingE561.rdlc" />
+    <EmbeddedResource Include="rptRevisionCommiteeMeetingE561.resx">
+      <DependentUpon>rptRevisionCommiteeMeetingE561.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSupplierE7427.rdlc" />
+    <EmbeddedResource Include="rptSupplierEvaluationCriteriaE745.rdlc" />
+    <EmbeddedResource Include="rptSupplierEvaluationCriteriaE745.resx">
+      <DependentUpon>rptSupplierEvaluationCriteriaE745.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSupplierEvaluationSurveyE746.resx">
+      <DependentUpon>rptSupplierEvaluationSurveyE746.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSuppliersE7427.resx">
+      <DependentUpon>rptSuppliersE7427.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptTasksByProject.rdlc" />
+    <EmbeddedResource Include="rptTasksByProject.resx">
+      <DependentUpon>rptTasksByProject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptTrainningProgrammeE624.rdlc" />
+    <EmbeddedResource Include="rptTrainningProgrammeE624.resx">
+      <DependentUpon>rptTrainningProgrammeE624.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="isoDiadrasis_1_TemporaryKey.pfx" />
+    <None Include="isoDiadrasis_2_TemporaryKey.pfx" />
+    <None Include="isoDiadrasis_TemporaryKey.pfx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="diadrasisProjectsDBDataSet.xsc">
+      <DependentUpon>diadrasisProjectsDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="diadrasisProjectsDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>diadrasisProjectsDBDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="diadrasisProjectsDBDataSet.xss">
+      <DependentUpon>diadrasisProjectsDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\logoDiadrasis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tag_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_pie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\evaluation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sLogoDiadrasis.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comments.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\content_management.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documentation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\operation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Policies.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\projectManagement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\education.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_printer.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

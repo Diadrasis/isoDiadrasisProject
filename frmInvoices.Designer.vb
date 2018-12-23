@@ -21,6 +21,7 @@ Partial Class frmInvoices
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmInvoices))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DiadrasisProjectsDBDataSet = New diadrasisProjects.diadrasisProjectsDBDataSet()
         Me.RptInvoiceBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RptInvoiceTableAdapter = New diadrasisProjects.diadrasisProjectsDBDataSetTableAdapters.rptInvoiceTableAdapter()
@@ -36,22 +37,35 @@ Partial Class frmInvoices
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.RptInvoiceDataGridView = New System.Windows.Forms.DataGridView()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.VwCustomerDiadrasisBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.VwCustomerDiadrasisTableAdapter = New diadrasisProjects.diadrasisProjectsDBDataSetTableAdapters.vwCustomerDiadrasisTableAdapter()
         Me.invoiceId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.invoiceCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.invoiceDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.invoiceTypeDescription = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.customerId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.customerCompany = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.invoiceDescription = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.invoiceComments = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.invoicePaid = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.customerProfession = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.invoice = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Payment = New System.Windows.Forms.DataGridViewImageColumn()
         CType(Me.DiadrasisProjectsDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RptInvoiceBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RptInvoiceBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RptInvoiceBindingNavigator.SuspendLayout()
         CType(Me.RptInvoiceDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VwCustomerDiadrasisBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DiadrasisProjectsDBDataSet
@@ -82,6 +96,9 @@ Partial Class frmInvoices
         Me.TableAdapterManager.tblInspectionsReportTableAdapter = Nothing
         Me.TableAdapterManager.tblInspectionsTableAdapter = Nothing
         Me.TableAdapterManager.tblInvoiceItemsTableAdapter = Nothing
+        Me.TableAdapterManager.tblInvoiceResponsibles1TableAdapter = Nothing
+        Me.TableAdapterManager.tblInvoiceResponsiblesTableAdapter = Nothing
+        Me.TableAdapterManager.tblInvoicesByIDPaymentTableAdapter = Nothing
         Me.TableAdapterManager.tblInvoicesTableAdapter = Nothing
         Me.TableAdapterManager.tblInvoiceTypesTableAdapter = Nothing
         Me.TableAdapterManager.tblLoginTableAdapter = Nothing
@@ -217,12 +234,85 @@ Partial Class frmInvoices
         Me.RptInvoiceDataGridView.AllowUserToOrderColumns = True
         Me.RptInvoiceDataGridView.AutoGenerateColumns = False
         Me.RptInvoiceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.RptInvoiceDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.invoiceId, Me.invoiceCode, Me.invoiceDate, Me.invoiceTypeDescription, Me.customerCompany, Me.invoiceDescription, Me.invoiceComments, Me.invoice})
+        Me.RptInvoiceDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.invoiceId, Me.invoiceCode, Me.invoiceDate, Me.invoiceTypeDescription, Me.customerId, Me.customerCompany, Me.invoiceDescription, Me.invoiceComments, Me.invoicePaid, Me.Column1, Me.customerProfession, Me.invoice, Me.Payment})
         Me.RptInvoiceDataGridView.DataSource = Me.RptInvoiceBindingSource
-        Me.RptInvoiceDataGridView.Location = New System.Drawing.Point(107, 265)
+        Me.RptInvoiceDataGridView.Location = New System.Drawing.Point(28, 260)
         Me.RptInvoiceDataGridView.Name = "RptInvoiceDataGridView"
-        Me.RptInvoiceDataGridView.Size = New System.Drawing.Size(954, 220)
+        Me.RptInvoiceDataGridView.Size = New System.Drawing.Size(1247, 220)
         Me.RptInvoiceDataGridView.TabIndex = 4
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Εκδοθείσες", "Προσωρινά Αποθηκευμένες"})
+        Me.ComboBox1.Location = New System.Drawing.Point(286, 186)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(177, 21)
+        Me.ComboBox1.TabIndex = 5
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(283, 164)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(69, 13)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "Κατάσταση "
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(874, 164)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(95, 48)
+        Me.Button1.TabIndex = 7
+        Me.Button1.Text = "Refresh"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(480, 186)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 8
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.diadrasisProjects.My.Resources.Resources.search
+        Me.PictureBox4.InitialImage = Global.diadrasisProjects.My.Resources.Resources.search
+        Me.PictureBox4.Location = New System.Drawing.Point(480, 140)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(32, 37)
+        Me.PictureBox4.TabIndex = 9
+        Me.PictureBox4.TabStop = False
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.DataSource = Me.VwCustomerDiadrasisBindingSource
+        Me.ComboBox2.DisplayMember = "customerTitle"
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(609, 185)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(150, 21)
+        Me.ComboBox2.TabIndex = 10
+        Me.ComboBox2.ValueMember = "customerId"
+        '
+        'VwCustomerDiadrasisBindingSource
+        '
+        Me.VwCustomerDiadrasisBindingSource.DataMember = "vwCustomerDiadrasis"
+        Me.VwCustomerDiadrasisBindingSource.DataSource = Me.DiadrasisProjectsDBDataSet
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(606, 164)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(53, 13)
+        Me.Label2.TabIndex = 11
+        Me.Label2.Text = "Πελάτης "
+        '
+        'VwCustomerDiadrasisTableAdapter
+        '
+        Me.VwCustomerDiadrasisTableAdapter.ClearBeforeFill = True
         '
         'invoiceId
         '
@@ -251,6 +341,12 @@ Partial Class frmInvoices
         Me.invoiceTypeDescription.Name = "invoiceTypeDescription"
         Me.invoiceTypeDescription.ReadOnly = True
         '
+        'customerId
+        '
+        Me.customerId.DataPropertyName = "customerId"
+        Me.customerId.HeaderText = "customerId"
+        Me.customerId.Name = "customerId"
+        '
         'customerCompany
         '
         Me.customerCompany.DataPropertyName = "customerCompany"
@@ -272,43 +368,49 @@ Partial Class frmInvoices
         Me.invoiceComments.Name = "invoiceComments"
         Me.invoiceComments.ReadOnly = True
         '
+        'invoicePaid
+        '
+        Me.invoicePaid.DataPropertyName = "invoicePaid"
+        Me.invoicePaid.HeaderText = "invoicePaid"
+        Me.invoicePaid.Name = "invoicePaid"
+        '
+        'Column1
+        '
+        Me.Column1.DataPropertyName = "payDate"
+        DataGridViewCellStyle1.Format = "d"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.Column1.DefaultCellStyle = DataGridViewCellStyle1
+        Me.Column1.HeaderText = "payDate"
+        Me.Column1.Name = "Column1"
+        '
+        'customerProfession
+        '
+        Me.customerProfession.DataPropertyName = "payComments"
+        Me.customerProfession.HeaderText = "payComments"
+        Me.customerProfession.Name = "customerProfession"
+        '
         'invoice
         '
         Me.invoice.HeaderText = "Εκτύπωση"
         Me.invoice.Image = Global.diadrasisProjects.My.Resources.Resources.documentation
         Me.invoice.Name = "invoice"
         '
-        'ComboBox1
+        'Payment
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Εκδοθείσες", "Προσωρινά Αποθηκευμένες"})
-        Me.ComboBox1.Location = New System.Drawing.Point(321, 187)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(219, 21)
-        Me.ComboBox1.TabIndex = 5
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(318, 171)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(69, 13)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Κατάσταση "
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(660, 164)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(95, 48)
-        Me.Button1.TabIndex = 7
-        Me.Button1.Text = "Refresh"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Payment.HeaderText = "Πληρωμή"
+        Me.Payment.Image = Global.diadrasisProjects.My.Resources.Resources.banknotes
+        Me.Payment.Name = "Payment"
+        Me.Payment.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Payment.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'frmInvoices
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.ClientSize = New System.Drawing.Size(1252, 739)
+        Me.ClientSize = New System.Drawing.Size(1370, 739)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBox1)
@@ -320,12 +422,18 @@ Partial Class frmInvoices
         Me.Controls.SetChildIndex(Me.ComboBox1, 0)
         Me.Controls.SetChildIndex(Me.Label1, 0)
         Me.Controls.SetChildIndex(Me.Button1, 0)
+        Me.Controls.SetChildIndex(Me.TextBox1, 0)
+        Me.Controls.SetChildIndex(Me.PictureBox4, 0)
+        Me.Controls.SetChildIndex(Me.ComboBox2, 0)
+        Me.Controls.SetChildIndex(Me.Label2, 0)
         CType(Me.DiadrasisProjectsDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RptInvoiceBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RptInvoiceBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RptInvoiceBindingNavigator.ResumeLayout(False)
         Me.RptInvoiceBindingNavigator.PerformLayout()
         CType(Me.RptInvoiceDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VwCustomerDiadrasisBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -376,14 +484,24 @@ Partial Class frmInvoices
     Friend WithEvents DataGridViewTextBoxColumn47 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents invoiceId As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents invoiceCode As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents invoiceDate As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents invoiceTypeDescription As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents customerCompany As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents invoiceDescription As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents invoiceComments As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents invoice As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents Button1 As System.Windows.Forms.Button
-
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents VwCustomerDiadrasisBindingSource As BindingSource
+    Friend WithEvents VwCustomerDiadrasisTableAdapter As diadrasisProjectsDBDataSetTableAdapters.vwCustomerDiadrasisTableAdapter
+    Friend WithEvents invoiceId As DataGridViewTextBoxColumn
+    Friend WithEvents invoiceCode As DataGridViewTextBoxColumn
+    Friend WithEvents invoiceDate As DataGridViewTextBoxColumn
+    Friend WithEvents invoiceTypeDescription As DataGridViewTextBoxColumn
+    Friend WithEvents customerId As DataGridViewTextBoxColumn
+    Friend WithEvents customerCompany As DataGridViewTextBoxColumn
+    Friend WithEvents invoiceDescription As DataGridViewTextBoxColumn
+    Friend WithEvents invoiceComments As DataGridViewTextBoxColumn
+    Friend WithEvents invoicePaid As DataGridViewCheckBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents customerProfession As DataGridViewTextBoxColumn
+    Friend WithEvents invoice As DataGridViewImageColumn
+    Friend WithEvents Payment As DataGridViewImageColumn
 End Class

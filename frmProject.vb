@@ -89,6 +89,20 @@
                 Dim oform As New frmInvoiceData
                 oform.invId = newId
                 oform.Show()
+            ElseIf dgv.Rows(e.RowIndex).Cells("Receipt").ColumnIndex = e.ColumnIndex Then
+                SaveChanges()
+                Dim newId As Integer = InsertInvoice(6, dgv.Rows(e.RowIndex).Cells("projectId").Value, "",
+                                                     dgv.Rows(e.RowIndex).Cells("projectName").Value)
+                Dim oform As New frmInvoiceData
+                oform.invId = newId
+                oform.Show()
+            ElseIf dgv.Rows(e.RowIndex).Cells("RetailReceipt").ColumnIndex = e.ColumnIndex Then
+                SaveChanges()
+                Dim newId As Integer = InsertInvoice(7, dgv.Rows(e.RowIndex).Cells("projectId").Value, "",
+                                                     dgv.Rows(e.RowIndex).Cells("projectName").Value)
+                Dim oform As New frmInvoiceData
+                oform.invId = newId
+                oform.Show()
             End If
         End If
     End Sub

@@ -714,7 +714,7 @@
         <Top>7.76147cm</Top>
         <Left>0.42334cm</Left>
         <Height>1.16472cm</Height>
-        <Width>11.46001cm</Width>
+        <Width>9.97834cm</Width>
         <ZIndex>23</ZIndex>
         <Style>
           <Border>
@@ -2095,7 +2095,7 @@
         <Top>4.77605cm</Top>
         <Left>0.42334cm</Left>
         <Height>2.06461cm</Height>
-        <Width>25.73185cm</Width>
+        <Width>25.73186cm</Width>
         <ZIndex>31</ZIndex>
         <Style>
           <Border>
@@ -2120,8 +2120,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>7.12619cm</Top>
-        <Left>11.98128cm</Left>
+        <Top>7.05564cm</Top>
+        <Left>10.57807cm</Left>
         <Height>0.6cm</Height>
         <Width>3.43958cm</Width>
         <ZIndex>32</ZIndex>
@@ -2153,9 +2153,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>7.76147cm</Top>
-        <Left>11.98918cm</Left>
+        <Left>10.57807cm</Left>
         <Height>1.16472cm</Height>
-        <Width>7.73202cm</Width>
+        <Width>9.14313cm</Width>
         <ZIndex>33</ZIndex>
         <Style>
           <Border>
@@ -2175,12 +2175,23 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Τράπεζας Πειραιώς </Value>
+                <Value>Πειραιώς  IBAN: </Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Century Gothic</FontFamily>
                   <FontSize>9pt</FontSize>
                   <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>GR46 0172 1820 0051 8204 1706 901</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
                   <TextDecoration>None</TextDecoration>
                   <Color>#000000</Color>
                 </Style>
@@ -2191,12 +2202,23 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>IBAN: GR46 0172 1820 0051 8204 1706 901</Value>
+                <Value>Alpha Bank  ΙΒΑΝ: </Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Century Gothic</FontFamily>
                   <FontSize>9pt</FontSize>
                   <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>GR39 0140 1040 1040 0200 2025 930</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
                   <TextDecoration>None</TextDecoration>
                   <Color>#000000</Color>
                 </Style>
@@ -2207,9 +2229,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>9.10286cm</Top>
-        <Left>11.98918cm</Left>
+        <Left>10.57807cm</Left>
         <Height>1.59715cm</Height>
-        <Width>7.73202cm</Width>
+        <Width>9.14313cm</Width>
         <ZIndex>34</ZIndex>
         <Style>
           <Border>
@@ -2263,7 +2285,7 @@
         <Top>9.10286cm</Top>
         <Left>0.40754cm</Left>
         <Height>1.59715cm</Height>
-        <Width>11.38945cm</Width>
+        <Width>9.99414cm</Width>
         <ZIndex>35</ZIndex>
         <Style>
           <Border>

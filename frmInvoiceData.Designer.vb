@@ -73,6 +73,7 @@ Partial Class frmInvoiceData
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TblInvoiceItemsTableAdapter = New diadrasisProjects.diadrasisProjectsDBDataSetTableAdapters.tblInvoiceItemsTableAdapter()
         Me.TableAdapterManager = New diadrasisProjects.diadrasisProjectsDBDataSetTableAdapters.TableAdapterManager()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -604,10 +605,21 @@ Partial Class frmInvoiceData
         Me.TableAdapterManager.tblTrainningTopicTraineesTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = diadrasisProjects.diadrasisProjectsDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(574, 587)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox1.TabIndex = 17
+        Me.CheckBox1.Text = "CheckBox1"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'frmInvoiceData
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.ClientSize = New System.Drawing.Size(1252, 725)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.txtPayment)
         Me.Controls.Add(Me.Label13)
@@ -629,6 +641,7 @@ Partial Class frmInvoiceData
         Me.Controls.SetChildIndex(Me.Label13, 0)
         Me.Controls.SetChildIndex(Me.txtPayment, 0)
         Me.Controls.SetChildIndex(Me.Button3, 0)
+        Me.Controls.SetChildIndex(Me.CheckBox1, 0)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -704,5 +717,5 @@ Partial Class frmInvoiceData
     Friend WithEvents invoiceId As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents invoiceItemComments As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
-
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

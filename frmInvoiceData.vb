@@ -84,6 +84,9 @@
                 End If
             End If
         Next
+
+        Me.CheckBox1.Checked = False
+
     End Sub
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
@@ -252,7 +255,12 @@
 
             If e.ColumnIndex = row.Cells("invoiceItemFPA").ColumnIndex Then
                 If row.Cells("invoiceItemFPA").Value Is System.DBNull.Value Then
-                    row.Cells("invoiceItemFPA").Value = fpaValues.First().ToString()
+                    If Me.CheckBox1.Checked = False Then
+                        row.Cells("invoiceItemFPA").Value = fpaValues.First().ToString()
+                    Else
+                        row.Cells("invoiceItemFPA").Value = "0"
+                    End If
+
                 Else
                     If Not fpaValues.Contains(row.Cells("invoiceItemFPA").Value) Then
                         Dim msg As String = "Μη επιτρεπτή τιμή ΦΠΑ. Επιτρεπτές τιμές είναι οι < "

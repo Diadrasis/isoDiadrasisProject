@@ -96,13 +96,13 @@
             searchExpression2 = ""
             RptInvoiceBindingSource.RemoveFilter()
         Else
-            searchExpression2 = "invoiceCode Like '%" + Me.TextBox1.Text + "%' or customerCompany Like '%" + Me.TextBox1.Text + "%'"
+            searchExpression2 = "(invoiceCode Like '%" + Me.TextBox1.Text + "%' or customerCompany Like '%" + Me.TextBox1.Text + "%')"
         End If
         FilterData()
     End Sub
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
-        If Me.ComboBox2.SelectedValue = 182 Then
+        If Me.ComboBox2.SelectedValue = 182 Or ComboBox2.SelectedValue = Nothing Then
             searchExpression3 = ""
         Else
             searchExpression3 = "customerID =" + CStr(Me.ComboBox2.SelectedValue)

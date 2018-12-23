@@ -5,12 +5,13 @@
         Me.Validate()
         Me.TblInvoicesByIDPaymentBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.DiadrasisProjectsDBDataSet)
-
         invForm.RefreshDataGrid()
 
     End Sub
 
     Private Sub frmInvoicePayment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'DiadrasisProjectsDBDataSet.tblInvoicePaymentTypes' table. You can move, or remove it, as needed.
+        Me.TblInvoicePaymentTypesTableAdapter.Fill(Me.DiadrasisProjectsDBDataSet.tblInvoicePaymentTypes)
         'TODO: This line of code loads data into the 'DiadrasisProjectsDBDataSet.tblInvoiceResponsibles' table. You can move, or remove it, as needed.
         Me.TblInvoiceResponsiblesTableAdapter.Fill(Me.DiadrasisProjectsDBDataSet.tblInvoiceResponsibles)
         'TODO: This line of code loads data into the 'DiadrasisProjectsDBDataSet.tblInvoices' table. You can move, or remove it, as needed.

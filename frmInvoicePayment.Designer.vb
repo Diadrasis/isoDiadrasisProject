@@ -35,6 +35,7 @@ Partial Class frmInvoicePayment
         Dim Label3 As System.Windows.Forms.Label
         Dim InvresIDLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmInvoicePayment))
+        Dim InvPaymentTypeIDLabel As System.Windows.Forms.Label
         Me.DiadrasisProjectsDBDataSet = New diadrasisProjects.diadrasisProjectsDBDataSet()
         Me.TblInvoicesByIDPaymentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblInvoicesByIDPaymentTableAdapter = New diadrasisProjects.diadrasisProjectsDBDataSetTableAdapters.tblInvoicesByIDPaymentTableAdapter()
@@ -59,9 +60,12 @@ Partial Class frmInvoicePayment
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.InvresIDComboBox = New System.Windows.Forms.ComboBox()
-        Me.DiadrasisProjectsDBDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblInvoiceResponsiblesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DiadrasisProjectsDBDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblInvoiceResponsiblesTableAdapter = New diadrasisProjects.diadrasisProjectsDBDataSetTableAdapters.tblInvoiceResponsiblesTableAdapter()
+        Me.InvPaymentTypeIDComboBox = New System.Windows.Forms.ComboBox()
+        Me.TblInvoicePaymentTypesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TblInvoicePaymentTypesTableAdapter = New diadrasisProjects.diadrasisProjectsDBDataSetTableAdapters.tblInvoicePaymentTypesTableAdapter()
         InvoiceIdLabel = New System.Windows.Forms.Label()
         ProjectIdLabel = New System.Windows.Forms.Label()
         InvoiceTypeIdLabel = New System.Windows.Forms.Label()
@@ -73,6 +77,7 @@ Partial Class frmInvoicePayment
         InvoiceCommentsLabel = New System.Windows.Forms.Label()
         Label3 = New System.Windows.Forms.Label()
         InvresIDLabel = New System.Windows.Forms.Label()
+        InvPaymentTypeIDLabel = New System.Windows.Forms.Label()
         CType(Me.DiadrasisProjectsDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblInvoicesByIDPaymentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblInvoicesByIDPaymentBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -80,8 +85,9 @@ Partial Class frmInvoicePayment
         CType(Me.TblProjectBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblInvoiceTypesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VwProjectBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DiadrasisProjectsDBDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblInvoiceResponsiblesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DiadrasisProjectsDBDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblInvoicePaymentTypesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'InvoiceIdLabel
@@ -187,7 +193,7 @@ Partial Class frmInvoicePayment
         '
         Label3.AutoSize = True
         Label3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
-        Label3.Location = New System.Drawing.Point(30, 490)
+        Label3.Location = New System.Drawing.Point(30, 531)
         Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
         Label3.Size = New System.Drawing.Size(166, 17)
@@ -197,7 +203,7 @@ Partial Class frmInvoicePayment
         'InvresIDLabel
         '
         InvresIDLabel.AutoSize = True
-        InvresIDLabel.Location = New System.Drawing.Point(112, 446)
+        InvresIDLabel.Location = New System.Drawing.Point(107, 486)
         InvresIDLabel.Name = "InvresIDLabel"
         InvresIDLabel.Size = New System.Drawing.Size(84, 17)
         InvresIDLabel.TabIndex = 24
@@ -231,6 +237,7 @@ Partial Class frmInvoicePayment
         Me.TableAdapterManager.tblInspectionsReportTableAdapter = Nothing
         Me.TableAdapterManager.tblInspectionsTableAdapter = Nothing
         Me.TableAdapterManager.tblInvoiceItemsTableAdapter = Nothing
+        Me.TableAdapterManager.tblInvoicePaymentTypesTableAdapter = Nothing
         Me.TableAdapterManager.tblInvoiceResponsibles1TableAdapter = Nothing
         Me.TableAdapterManager.tblInvoiceResponsiblesTableAdapter = Nothing
         Me.TableAdapterManager.tblInvoicesByIDPaymentTableAdapter = Me.TblInvoicesByIDPaymentTableAdapter
@@ -292,7 +299,7 @@ Partial Class frmInvoicePayment
         Me.TblInvoicesByIDPaymentBindingNavigator.DeleteItem = Nothing
         Me.TblInvoicesByIDPaymentBindingNavigator.Dock = System.Windows.Forms.DockStyle.None
         Me.TblInvoicesByIDPaymentBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TblInvoicesByIDPaymentBindingNavigatorSaveItem})
-        Me.TblInvoicesByIDPaymentBindingNavigator.Location = New System.Drawing.Point(208, 490)
+        Me.TblInvoicesByIDPaymentBindingNavigator.Location = New System.Drawing.Point(208, 531)
         Me.TblInvoicesByIDPaymentBindingNavigator.MoveFirstItem = Nothing
         Me.TblInvoicesByIDPaymentBindingNavigator.MoveLastItem = Nothing
         Me.TblInvoicesByIDPaymentBindingNavigator.MoveNextItem = Nothing
@@ -452,31 +459,63 @@ Partial Class frmInvoicePayment
         Me.InvresIDComboBox.DataSource = Me.TblInvoiceResponsiblesBindingSource
         Me.InvresIDComboBox.DisplayMember = "invresInit"
         Me.InvresIDComboBox.FormattingEnabled = True
-        Me.InvresIDComboBox.Location = New System.Drawing.Point(210, 443)
+        Me.InvresIDComboBox.Location = New System.Drawing.Point(208, 486)
         Me.InvresIDComboBox.Name = "InvresIDComboBox"
         Me.InvresIDComboBox.Size = New System.Drawing.Size(121, 25)
         Me.InvresIDComboBox.TabIndex = 25
         Me.InvresIDComboBox.ValueMember = "invresID"
-        '
-        'DiadrasisProjectsDBDataSetBindingSource
-        '
-        Me.DiadrasisProjectsDBDataSetBindingSource.DataSource = Me.DiadrasisProjectsDBDataSet
-        Me.DiadrasisProjectsDBDataSetBindingSource.Position = 0
         '
         'TblInvoiceResponsiblesBindingSource
         '
         Me.TblInvoiceResponsiblesBindingSource.DataMember = "tblInvoiceResponsibles"
         Me.TblInvoiceResponsiblesBindingSource.DataSource = Me.DiadrasisProjectsDBDataSet
         '
+        'DiadrasisProjectsDBDataSetBindingSource
+        '
+        Me.DiadrasisProjectsDBDataSetBindingSource.DataSource = Me.DiadrasisProjectsDBDataSet
+        Me.DiadrasisProjectsDBDataSetBindingSource.Position = 0
+        '
         'TblInvoiceResponsiblesTableAdapter
         '
         Me.TblInvoiceResponsiblesTableAdapter.ClearBeforeFill = True
+        '
+        'InvPaymentTypeIDLabel
+        '
+        InvPaymentTypeIDLabel.AutoSize = True
+        InvPaymentTypeIDLabel.Location = New System.Drawing.Point(52, 449)
+        InvPaymentTypeIDLabel.Name = "InvPaymentTypeIDLabel"
+        InvPaymentTypeIDLabel.Size = New System.Drawing.Size(133, 17)
+        InvPaymentTypeIDLabel.TabIndex = 25
+        InvPaymentTypeIDLabel.Text = "Τρόπος Πληρωμής:"
+        '
+        'InvPaymentTypeIDComboBox
+        '
+        Me.InvPaymentTypeIDComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.TblInvoicesByIDPaymentBindingSource, "invPaymentTypeID", True))
+        Me.InvPaymentTypeIDComboBox.DataSource = Me.TblInvoicePaymentTypesBindingSource
+        Me.InvPaymentTypeIDComboBox.DisplayMember = "invPaymentTypeDesc"
+        Me.InvPaymentTypeIDComboBox.FormattingEnabled = True
+        Me.InvPaymentTypeIDComboBox.Location = New System.Drawing.Point(209, 446)
+        Me.InvPaymentTypeIDComboBox.Name = "InvPaymentTypeIDComboBox"
+        Me.InvPaymentTypeIDComboBox.Size = New System.Drawing.Size(219, 25)
+        Me.InvPaymentTypeIDComboBox.TabIndex = 26
+        Me.InvPaymentTypeIDComboBox.ValueMember = "invPaymentTypeID"
+        '
+        'TblInvoicePaymentTypesBindingSource
+        '
+        Me.TblInvoicePaymentTypesBindingSource.DataMember = "tblInvoicePaymentTypes"
+        Me.TblInvoicePaymentTypesBindingSource.DataSource = Me.DiadrasisProjectsDBDataSet
+        '
+        'TblInvoicePaymentTypesTableAdapter
+        '
+        Me.TblInvoicePaymentTypesTableAdapter.ClearBeforeFill = True
         '
         'frmInvoicePayment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(831, 721)
+        Me.Controls.Add(InvPaymentTypeIDLabel)
+        Me.Controls.Add(Me.InvPaymentTypeIDComboBox)
         Me.Controls.Add(InvresIDLabel)
         Me.Controls.Add(Me.InvresIDComboBox)
         Me.Controls.Add(Label3)
@@ -513,8 +552,9 @@ Partial Class frmInvoicePayment
         CType(Me.TblProjectBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblInvoiceTypesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VwProjectBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DiadrasisProjectsDBDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblInvoiceResponsiblesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DiadrasisProjectsDBDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblInvoicePaymentTypesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -547,4 +587,7 @@ Partial Class frmInvoicePayment
     Friend WithEvents DiadrasisProjectsDBDataSetBindingSource As BindingSource
     Friend WithEvents TblInvoiceResponsiblesBindingSource As BindingSource
     Friend WithEvents TblInvoiceResponsiblesTableAdapter As diadrasisProjectsDBDataSetTableAdapters.tblInvoiceResponsiblesTableAdapter
+    Friend WithEvents InvPaymentTypeIDComboBox As ComboBox
+    Friend WithEvents TblInvoicePaymentTypesBindingSource As BindingSource
+    Friend WithEvents TblInvoicePaymentTypesTableAdapter As diadrasisProjectsDBDataSetTableAdapters.tblInvoicePaymentTypesTableAdapter
 End Class

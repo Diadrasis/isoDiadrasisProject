@@ -74,6 +74,7 @@ Partial Class frmInvoiceData
         Me.TblInvoiceItemsTableAdapter = New diadrasisProjects.diadrasisProjectsDBDataSetTableAdapters.tblInvoiceItemsTableAdapter()
         Me.TableAdapterManager = New diadrasisProjects.diadrasisProjectsDBDataSetTableAdapters.TableAdapterManager()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -563,6 +564,10 @@ Partial Class frmInvoiceData
         Me.TableAdapterManager.tblInspectionsReportTableAdapter = Nothing
         Me.TableAdapterManager.tblInspectionsTableAdapter = Nothing
         Me.TableAdapterManager.tblInvoiceItemsTableAdapter = Me.TblInvoiceItemsTableAdapter
+        Me.TableAdapterManager.tblInvoicePaymentTypesTableAdapter = Nothing
+        Me.TableAdapterManager.tblInvoiceResponsibles1TableAdapter = Nothing
+        Me.TableAdapterManager.tblInvoiceResponsiblesTableAdapter = Nothing
+        Me.TableAdapterManager.tblInvoicesByIDPaymentTableAdapter = Nothing
         Me.TableAdapterManager.tblInvoicesTableAdapter = Nothing
         Me.TableAdapterManager.tblInvoiceTypesTableAdapter = Nothing
         Me.TableAdapterManager.tblLoginTableAdapter = Nothing
@@ -615,10 +620,20 @@ Partial Class frmInvoiceData
         Me.CheckBox1.Text = "CheckBox1"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(758, 620)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(142, 44)
+        Me.Button4.TabIndex = 18
+        Me.Button4.Text = "Έκδοση Μαρία Λεωνίδα"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'frmInvoiceData
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.ClientSize = New System.Drawing.Size(1252, 725)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.txtPayment)
@@ -642,6 +657,7 @@ Partial Class frmInvoiceData
         Me.Controls.SetChildIndex(Me.txtPayment, 0)
         Me.Controls.SetChildIndex(Me.Button3, 0)
         Me.Controls.SetChildIndex(Me.CheckBox1, 0)
+        Me.Controls.SetChildIndex(Me.Button4, 0)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -718,4 +734,5 @@ Partial Class frmInvoiceData
     Friend WithEvents invoiceItemComments As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Button4 As Button
 End Class

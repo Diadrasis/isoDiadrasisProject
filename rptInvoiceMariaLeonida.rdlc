@@ -713,7 +713,7 @@
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>7.76147cm</Top>
         <Left>0.42334cm</Left>
-        <Height>1.16472cm</Height>
+        <Height>2.93854cm</Height>
         <Width>9.97834cm</Width>
         <ZIndex>23</ZIndex>
         <Style>
@@ -2186,7 +2186,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>GR46 0172 1820 0051 8204 1706 901</Value>
+                <Value>GR41 0172 0390 0050 3908 8217 669</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Century Gothic</FontFamily>
@@ -2202,23 +2202,12 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Alpha Bank  ΙΒΑΝ: </Value>
+                <Value />
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Century Gothic</FontFamily>
                   <FontSize>9pt</FontSize>
                   <FontWeight>Normal</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>GR39 0140 1040 1040 0200 2025 930</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Century Gothic</FontFamily>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
                   <TextDecoration>None</TextDecoration>
                   <Color>#000000</Color>
                 </Style>
@@ -2244,60 +2233,6 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox33">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Ειδικό καθεστώς καταβολής του Φόρου Προστιθέμενης Αξίας κατά τον χρόνο είσπραξης της αντιπαροχής</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Century Gothic</FontFamily>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>άρθρο 226.7.α Οδηγίας 2006/112/ΕΚ-άρθρο 39.β Κώδικα ΦΠΑ</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Century Gothic</FontFamily>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>9.10286cm</Top>
-        <Left>0.40754cm</Left>
-        <Height>1.59715cm</Height>
-        <Width>9.99414cm</Width>
-        <ZIndex>35</ZIndex>
-        <Style>
-          <Border>
-            <Color>LightGrey</Color>
-            <Style>Solid</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
     </ReportItems>
     <Height>10.8764cm</Height>
     <Style />
@@ -2309,20 +2244,6 @@
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Image Name="logo">
-          <Source>Embedded</Source>
-          <Value>logoDiadrasis</Value>
-          <Sizing>FitProportional</Sizing>
-          <Top>0.94403cm</Top>
-          <Left>0.41544cm</Left>
-          <Height>1.27cm</Height>
-          <Width>5.37104cm</Width>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </Image>
         <Textbox Name="Textbox3">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -2330,7 +2251,22 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>ΔΙΑΔΡΑΣΙΣ - ΛΑΔΑΣ Ι. &amp; ΣΙΑ ΟΕ</Value>
+                  <Value>ΜΑΡΙΑ ΛΕΩΝΙΔΑ</Value>
+                  <Style>
+                    <FontFamily>Century Gothic</FontFamily>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>ΥΠΗΡΕΣΙΕΣ ΕΚΠΑΙΔΕΥΣΗΣ &amp; ΑΝΑΠΤΥΞΗΣ ΠΟΛΥΜΕΣΩΝ</Value>
                   <Style>
                     <FontFamily>Century Gothic</FontFamily>
                   </Style>
@@ -2343,7 +2279,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>ΥΠΗΡΕΣΙΕΣ ΠΛΗΡΟΦΟΡΙΚΗΣ &amp; ΣΥΜΒΟΥΛΕΥΤΙΚΗΣ</Value>
+                  <Value>ΒΟΙΩΤΙΑΣ 7-9 - Τ.Κ. 152 31 ΑΘΗΝΑ</Value>
                   <Style>
                     <FontFamily>Century Gothic</FontFamily>
                   </Style>
@@ -2356,7 +2292,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>ΠΟΛΥΤΕΧΝΕΙΟΥ 12 - Τ.Κ. 104 33 ΑΘΗΝΑ</Value>
+                  <Value>ΑΦΜ: 056059895 - ΔΟΥ: ΧΑΛΑΝΔΡΙΟΥ</Value>
                   <Style>
                     <FontFamily>Century Gothic</FontFamily>
                   </Style>
@@ -2369,39 +2305,13 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>ΑΦΜ: 998805401 - ΔΟΥ: Δ' ΑΘΗΝΩΝ</Value>
-                  <Style>
-                    <FontFamily>Century Gothic</FontFamily>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>ΤΗΛ: 210 52 33 244 - FAX: 210 52 33 249</Value>
-                  <Style>
-                    <FontFamily>Century Gothic</FontFamily>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>email: </Value>
+                  <Value>ΤΗΛ: 2106753095 email: </Value>
                   <Style>
                     <FontFamily>Century Gothic</FontFamily>
                   </Style>
                 </TextRun>
                 <TextRun>
-                  <Value>info@diadrasis.gr</Value>
+                  <Value>leonidamaria1@gmail.com</Value>
                   <Style>
                     <FontFamily>Century Gothic</FontFamily>
                     <TextDecoration>Underline</TextDecoration>
@@ -2409,17 +2319,9 @@
                   </Style>
                 </TextRun>
                 <TextRun>
-                  <Value> - Site: </Value>
+                  <Value xml:space="preserve"> </Value>
                   <Style>
                     <FontFamily>Century Gothic</FontFamily>
-                  </Style>
-                </TextRun>
-                <TextRun>
-                  <Value>www.diadrasis.gr</Value>
-                  <Style>
-                    <FontFamily>Century Gothic</FontFamily>
-                    <TextDecoration>Underline</TextDecoration>
-                    <Color>Blue</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -2429,10 +2331,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Left>17.48516cm</Left>
+          <Left>16.53266cm</Left>
           <Height>2.84833cm</Height>
-          <Width>8.67796cm</Width>
-          <ZIndex>1</ZIndex>
+          <Width>9.63046cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -2494,7 +2395,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Για τη Διαδρασις</Value>
+                  <Value>Μαρία Λεωνίδα</Value>
                   <Style>
                     <FontFamily>Century Gothic</FontFamily>
                   </Style>
@@ -2742,10 +2643,22 @@
           <DataField>customerTitle</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="invoicePaid">
+          <DataField>invoicePaid</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="payDate">
+          <DataField>payDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="payComments">
+          <DataField>payComments</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>diadrasisProjectsDBDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\DIADRASIS\Desktop\kyriakos\Applications\isoDiadrasis\isoDiadrasisProject\diadrasisProjectsDBDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>E:\Projects\Διάδρασις\isoDiadrasis\vsProject\isoDiadrasisProject\diadrasisProjectsDBDataSet.xsd</rd:SchemaPath>
         <rd:TableName>rptInvoice</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

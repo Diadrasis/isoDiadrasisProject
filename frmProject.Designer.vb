@@ -63,6 +63,7 @@ Partial Class frmProject
         Me.ProformaInvoice = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Receipt = New System.Windows.Forms.DataGridViewImageColumn()
         Me.RetailReceipt = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.colLeonida = New System.Windows.Forms.DataGridViewImageColumn()
         Me.projectTypeId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.projectComments = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.TblProjectBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -201,7 +202,7 @@ Partial Class frmProject
         '
         Me.TblProjectDataGridView.AutoGenerateColumns = False
         Me.TblProjectDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.TblProjectDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.projectId, Me.customerId, Me.projectName, Me.projectDescription, Me.projectDateStart, Me.projectDateEnd, Me.projectHumanMonths, Me.projectBudget, Me.tasks, Me.staff, Me.invoice, Me.ProductInvoice, Me.CreditInvoice, Me.ProformaInvoice, Me.Receipt, Me.RetailReceipt, Me.projectTypeId, Me.projectComments})
+        Me.TblProjectDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.projectId, Me.customerId, Me.projectName, Me.projectDescription, Me.projectDateStart, Me.projectDateEnd, Me.projectHumanMonths, Me.projectBudget, Me.tasks, Me.staff, Me.invoice, Me.ProductInvoice, Me.CreditInvoice, Me.ProformaInvoice, Me.Receipt, Me.RetailReceipt, Me.colLeonida, Me.projectTypeId, Me.projectComments})
         Me.TblProjectDataGridView.DataSource = Me.TblProjectBindingSource
         Me.TblProjectDataGridView.Location = New System.Drawing.Point(37, 334)
         Me.TblProjectDataGridView.Name = "TblProjectDataGridView"
@@ -257,6 +258,9 @@ Partial Class frmProject
         Me.TableAdapterManager.tblInspectionsReportTableAdapter = Nothing
         Me.TableAdapterManager.tblInspectionsTableAdapter = Nothing
         Me.TableAdapterManager.tblInvoiceItemsTableAdapter = Nothing
+        Me.TableAdapterManager.tblInvoicePaymentTypesTableAdapter = Nothing
+        Me.TableAdapterManager.tblInvoiceResponsibles1TableAdapter = Nothing
+        Me.TableAdapterManager.tblInvoiceResponsiblesTableAdapter = Nothing
         Me.TableAdapterManager.tblInvoicesByIDPaymentTableAdapter = Nothing
         Me.TableAdapterManager.tblInvoicesTableAdapter = Nothing
         Me.TableAdapterManager.tblInvoiceTypesTableAdapter = Nothing
@@ -409,6 +413,7 @@ Partial Class frmProject
         'Receipt
         '
         Me.Receipt.HeaderText = "Receipt"
+        Me.Receipt.Image = Global.diadrasisProjects.My.Resources.Resources.coins
         Me.Receipt.Name = "Receipt"
         '
         'RetailReceipt
@@ -418,6 +423,14 @@ Partial Class frmProject
         Me.RetailReceipt.Name = "RetailReceipt"
         Me.RetailReceipt.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.RetailReceipt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'colLeonida
+        '
+        Me.colLeonida.HeaderText = "ΔΠΥ"
+        Me.colLeonida.Image = Global.diadrasisProjects.My.Resources.Resources.invoice
+        Me.colLeonida.Name = "colLeonida"
+        Me.colLeonida.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.colLeonida.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'projectTypeId
         '
@@ -504,6 +517,7 @@ Partial Class frmProject
     Friend WithEvents ProformaInvoice As DataGridViewImageColumn
     Friend WithEvents Receipt As DataGridViewImageColumn
     Friend WithEvents RetailReceipt As DataGridViewImageColumn
+    Friend WithEvents colLeonida As DataGridViewImageColumn
     Friend WithEvents projectTypeId As DataGridViewTextBoxColumn
     Friend WithEvents projectComments As DataGridViewTextBoxColumn
 End Class

@@ -46,7 +46,7 @@
     <SuiteName>Διάδρασις</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>16</ApplicationRevision>
+    <ApplicationRevision>17</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -511,6 +511,12 @@
     <Compile Include="rptInvoice.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="rptInvoiceMariaLeonida.Designer.vb">
+      <DependentUpon>rptInvoiceMariaLeonida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptInvoiceMariaLeonida.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="rptNonConformanceE831.Designer.vb">
       <DependentUpon>rptNonConformanceE831.vb</DependentUpon>
     </Compile>
@@ -684,9 +690,14 @@
     <EmbeddedResource Include="rptInspectionSceduleE821.resx">
       <DependentUpon>rptInspectionSceduleE821.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="rptInvoice.rdlc" />
+    <EmbeddedResource Include="rptInvoiceOE.rdlc" />
+    <EmbeddedResource Include="rptInvoiceMariaLeonida.rdlc" />
+    <EmbeddedResource Include="rptInvoiceIKE.rdlc" />
     <EmbeddedResource Include="rptInvoice.resx">
       <DependentUpon>rptInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptInvoiceMariaLeonida.resx">
+      <DependentUpon>rptInvoiceMariaLeonida.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rptNonConformanceE831.rdlc" />
     <EmbeddedResource Include="rptNonConformanceE831.resx">
@@ -983,16 +994,6 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="Microsoft.ReportViewer.WinForms">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\coins.png" />
@@ -1002,6 +1003,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\banknotes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

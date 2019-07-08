@@ -15,9 +15,11 @@
 
         dgv = TblInvoiceItemsDataGridView
 
+        'hide Leonida button
+        Me.Button4.Visible = False
+
         Dim myConnection As New System.Data.SqlClient.SqlConnection
         Dim myCommand As New System.Data.SqlClient.SqlCommand
-
         myConnection.ConnectionString = My.Settings.diadrasisProjectsDBConnectionString
 
         Try
@@ -91,7 +93,7 @@
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
         saveItems()
-        If UpdateInvoice(True) Then 'Invoice Completed       
+        If UpdateInvoice(True) Then 'Invoice Completed      
 
             Dim oform As New rptInvoice
             oform.invId = Me.invId
@@ -275,6 +277,22 @@
             End If
 
             computeCells(row)
+        End If
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        saveItems()
+        If UpdateInvoice(True) Then 'Invoice Completed      
+
+            Dim oform As New rptInvoice
+            oform.invId = Me.invId
+
+            Try
+                oform.Show()
+                Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.ToString())
+            End Try
         End If
     End Sub
 

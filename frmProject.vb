@@ -37,7 +37,6 @@
 
         DesignColumn(dgv, "projectDateStart", "Ημερομηνία Έναρξης", 120)
         dgv.Columns("projectDateStart").ReadOnly = True
-
         DesignColumn(dgv, "projectDateEnd", "Ημερομηνία Λήξης", 120)
 
         DesignColumn(dgv, "projectComments", "Παρατηρήσεις", 150)
@@ -45,6 +44,9 @@
         DesignColumn(dgv, "staff", "Προσωπικό", 80)
         DesignColumn(dgv, "projectHumanMonths", "A/M", 50)
         DesignColumn(dgv, "projectTypeId", False)
+
+        'hide column for Leonida
+        dgv.Columns("colLeonida").Visible = False
 
         Me.ComboBox1.Location = New Point(dbn.Location.X + 300, dbn.Location.Y)
 
@@ -99,6 +101,13 @@
             ElseIf dgv.Rows(e.RowIndex).Cells("RetailReceipt").ColumnIndex = e.ColumnIndex Then
                 SaveChanges()
                 Dim newId As Integer = InsertInvoice(7, dgv.Rows(e.RowIndex).Cells("projectId").Value, "",
+                                                     dgv.Rows(e.RowIndex).Cells("projectName").Value)
+                Dim oform As New frmInvoiceData
+                oform.invId = newId
+                oform.Show()
+            ElseIf dgv.Rows(e.RowIndex).Cells("colLeonida").ColumnIndex = e.ColumnIndex Then
+                SaveChanges()
+                Dim newId As Integer = InsertInvoice(8, dgv.Rows(e.RowIndex).Cells("projectId").Value, "",
                                                      dgv.Rows(e.RowIndex).Cells("projectName").Value)
                 Dim oform As New frmInvoiceData
                 oform.invId = newId

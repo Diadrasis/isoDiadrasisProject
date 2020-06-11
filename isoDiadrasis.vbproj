@@ -27,7 +27,7 @@
     <SccLocalPath>Svn</SccLocalPath>
     <SccAuxPath>Svn</SccAuxPath>
     <SccProvider>SubversionScc</SccProvider>
-    <PublishUrl>ftp://www.diadrasis.net/applications.diadrasis.net/wwwroot/Installations/isoDiadrasis/</PublishUrl>
+    <PublishUrl>ftp://5.172.201.127/applications.diadrasis.net/wwwroot/Installations/isoDiadrasis/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -46,8 +46,8 @@
     <SuiteName>Διάδρασις</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>17</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -85,7 +85,6 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -145,6 +144,12 @@
       <DependentUpon>frmInvoices.vb</DependentUpon>
     </Compile>
     <Compile Include="frmInvoices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProject.designer.vb">
+      <DependentUpon>frmProject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProject.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTextbox.Designer.vb">
@@ -422,12 +427,6 @@
     <Compile Include="frmMenu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProject.Designer.vb">
-      <DependentUpon>frmProject.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmProject.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmSettings.Designer.vb">
       <DependentUpon>frmSettings.vb</DependentUpon>
     </Compile>
@@ -635,6 +634,9 @@
     <EmbeddedResource Include="frmNonConformances.resx">
       <DependentUpon>frmNonConformances.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmProject.resx">
+      <DependentUpon>frmProject.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmProjectStaff.resx">
       <DependentUpon>frmProjectStaff.vb</DependentUpon>
     </EmbeddedResource>
@@ -690,9 +692,10 @@
     <EmbeddedResource Include="rptInspectionSceduleE821.resx">
       <DependentUpon>rptInspectionSceduleE821.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptInvoiceVassilopoulos.rdlc" />
+    <EmbeddedResource Include="rptInvoiceIKE.rdlc" />
     <EmbeddedResource Include="rptInvoiceOE.rdlc" />
     <EmbeddedResource Include="rptInvoiceMariaLeonida.rdlc" />
-    <EmbeddedResource Include="rptInvoiceIKE.rdlc" />
     <EmbeddedResource Include="rptInvoice.resx">
       <DependentUpon>rptInvoice.vb</DependentUpon>
     </EmbeddedResource>
@@ -743,9 +746,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmProject.resx">
-      <DependentUpon>frmProject.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReports.resx">
       <DependentUpon>frmReports.vb</DependentUpon>
@@ -992,6 +992,16 @@
       </TargetPath>
       <PublishState>Include</PublishState>
       <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Types">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>

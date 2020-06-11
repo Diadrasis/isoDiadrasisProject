@@ -84,7 +84,7 @@ Public Class ManualPrinting
         Dim report As LocalReport = New LocalReport()
         Dim parInvoiceType As New Microsoft.Reporting.WinForms.ReportParameter()
 
-        report.ReportEmbeddedResource = "diadrasisProjects.rptInvoice.rdlc"
+        report.ReportEmbeddedResource = "diadrasisProjects.rptInvoiceOE.rdlc"
 
         Dim _reportDataSource1, _reportDataSource2 As New Microsoft.Reporting.WinForms.ReportDataSource
 

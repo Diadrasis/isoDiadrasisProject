@@ -69,7 +69,6 @@
                                                      dgv.Rows(e.RowIndex).Cells("projectName").Value)
                 Dim oform As New frmInvoiceData
                 oform.invId = newId
-                oform.hasFPA = True
                 oform.Show()
             ElseIf dgv.Rows(e.RowIndex).Cells("ProductInvoice").ColumnIndex = e.ColumnIndex Then
                 SaveChanges()
@@ -77,7 +76,6 @@
                                                      dgv.Rows(e.RowIndex).Cells("projectName").Value)
                 Dim oform As New frmInvoiceData
                 oform.invId = newId
-                oform.hasFPA = True
                 oform.Show()
             ElseIf dgv.Rows(e.RowIndex).Cells("CreditInvoice").ColumnIndex = e.ColumnIndex Then
                 SaveChanges()
@@ -85,7 +83,6 @@
                                                      dgv.Rows(e.RowIndex).Cells("projectName").Value)
                 Dim oform As New frmInvoiceData
                 oform.invId = newId
-                oform.hasFPA = True
                 oform.Show()
             ElseIf dgv.Rows(e.RowIndex).Cells("ProformaInvoice").ColumnIndex = e.ColumnIndex Then
                 SaveChanges()
@@ -93,7 +90,6 @@
                                                      dgv.Rows(e.RowIndex).Cells("projectName").Value)
                 Dim oform As New frmInvoiceData
                 oform.invId = newId
-                oform.hasFPA = True
                 oform.Show()
             ElseIf dgv.Rows(e.RowIndex).Cells("Receipt").ColumnIndex = e.ColumnIndex Then
                 SaveChanges()
@@ -101,7 +97,6 @@
                                                      dgv.Rows(e.RowIndex).Cells("projectName").Value)
                 Dim oform As New frmInvoiceData
                 oform.invId = newId
-                oform.hasFPA = True
                 oform.Show()
             ElseIf dgv.Rows(e.RowIndex).Cells("RetailReceipt").ColumnIndex = e.ColumnIndex Then
                 SaveChanges()
@@ -109,7 +104,6 @@
                                                      dgv.Rows(e.RowIndex).Cells("projectName").Value)
                 Dim oform As New frmInvoiceData
                 oform.invId = newId
-                oform.hasFPA = True
                 oform.Show()
             ElseIf dgv.Rows(e.RowIndex).Cells("colLeonida").ColumnIndex = e.ColumnIndex Then
                 SaveChanges()
@@ -117,15 +111,6 @@
                                                      dgv.Rows(e.RowIndex).Cells("projectName").Value)
                 Dim oform As New frmInvoiceData
                 oform.invId = newId
-                oform.hasFPA = True
-                oform.Show()
-            ElseIf dgv.Rows(e.RowIndex).Cells("espa").ColumnIndex = e.ColumnIndex Then
-                SaveChanges()
-                Dim newId As Integer = InsertInvoice(9, dgv.Rows(e.RowIndex).Cells("projectId").Value, "",
-                                                     dgv.Rows(e.RowIndex).Cells("projectName").Value)
-                Dim oform As New frmInvoiceData
-                oform.invId = newId
-                oform.hasFPA = False
                 oform.Show()
             End If
         End If

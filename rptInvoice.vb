@@ -20,7 +20,7 @@
         End If
 
         Dim parameters() As Microsoft.Reporting.WinForms.ReportParameter = {parInvoiceType}
-        ReportViewer1.LocalReport.SetParameters(parameters)
+        'ReportViewer1.LocalReport.SetParameters(parameters)
         ReportViewer1.RefreshReport()
     End Sub
 

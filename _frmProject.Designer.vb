@@ -64,7 +64,6 @@ Partial Class frmProject
         Me.Receipt = New System.Windows.Forms.DataGridViewImageColumn()
         Me.RetailReceipt = New System.Windows.Forms.DataGridViewImageColumn()
         Me.colLeonida = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.espa = New System.Windows.Forms.DataGridViewImageColumn()
         Me.projectTypeId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.projectComments = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.TblProjectBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -203,7 +202,7 @@ Partial Class frmProject
         '
         Me.TblProjectDataGridView.AutoGenerateColumns = False
         Me.TblProjectDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.TblProjectDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.projectId, Me.customerId, Me.projectName, Me.projectDescription, Me.projectDateStart, Me.projectDateEnd, Me.projectHumanMonths, Me.projectBudget, Me.tasks, Me.staff, Me.invoice, Me.ProductInvoice, Me.CreditInvoice, Me.ProformaInvoice, Me.Receipt, Me.RetailReceipt, Me.colLeonida, Me.espa, Me.projectTypeId, Me.projectComments})
+        Me.TblProjectDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.projectId, Me.customerId, Me.projectName, Me.projectDescription, Me.projectDateStart, Me.projectDateEnd, Me.projectHumanMonths, Me.projectBudget, Me.tasks, Me.staff, Me.invoice, Me.ProductInvoice, Me.CreditInvoice, Me.ProformaInvoice, Me.Receipt, Me.RetailReceipt, Me.colLeonida, Me.projectTypeId, Me.projectComments})
         Me.TblProjectDataGridView.DataSource = Me.TblProjectBindingSource
         Me.TblProjectDataGridView.Location = New System.Drawing.Point(37, 334)
         Me.TblProjectDataGridView.Name = "TblProjectDataGridView"
@@ -433,12 +432,6 @@ Partial Class frmProject
         Me.colLeonida.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.colLeonida.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
-        'espa
-        '
-        Me.espa.HeaderText = "Επιχορήγηση"
-        Me.espa.Image = Global.diadrasisProjects.My.Resources.Resources.coins
-        Me.espa.Name = "espa"
-        '
         'projectTypeId
         '
         Me.projectTypeId.DataPropertyName = "projectTypeId"
@@ -525,7 +518,6 @@ Partial Class frmProject
     Friend WithEvents Receipt As DataGridViewImageColumn
     Friend WithEvents RetailReceipt As DataGridViewImageColumn
     Friend WithEvents colLeonida As DataGridViewImageColumn
-    Friend WithEvents espa As DataGridViewImageColumn
     Friend WithEvents projectTypeId As DataGridViewTextBoxColumn
     Friend WithEvents projectComments As DataGridViewTextBoxColumn
 End Class

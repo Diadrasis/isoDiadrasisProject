@@ -1,5 +1,6 @@
 ﻿Public Class frmInvoiceData
     Public invId As Integer
+    Public hasFPA As Boolean
 
     Private invoiceCode, invoiceDescription, invoiceComments As String
     Private invoiceDate As DateTime
@@ -79,10 +80,14 @@
 
         For Each row As DataGridViewRow In dgv.Rows
             If areValid(row) Then
-                If row.Index <> dgv.Rows.Count - 1 Then
+                If row.Index <> dgv.Rows.Count - 1 And Me.hasFPA = True Then
                     row.Cells("AmountValue").Value = (Convert.ToDouble(row.Cells("invoiceItemAmount").Value) * Convert.ToDouble(row.Cells("invoiceItemValue").Value)).ToString()
                     row.Cells("FPAValue").Value = (Convert.ToDouble(row.Cells("invoiceItemFPA").Value) * Convert.ToDouble(row.Cells("AmountValue").Value)).ToString()
                     row.Cells("OverallValue").Value = (Convert.ToDouble(row.Cells("AmountValue").Value) + Convert.ToDouble(row.Cells("FPAValue").Value)).ToString()
+                ElseIf row.Index <> dgv.Rows.Count - 1 And Me.hasFPA = False Then
+                    row.Cells("AmountValue").Value = (Convert.ToDouble(row.Cells("invoiceItemAmount").Value) * Convert.ToDouble(row.Cells("invoiceItemValue").Value)).ToString()
+                    row.Cells("FPAValue").Value = "0"
+                    row.Cells("OverallValue").Value = Convert.ToDouble(row.Cells("AmountValue").Value)
                 End If
             End If
         Next
@@ -257,7 +262,7 @@
 
             If e.ColumnIndex = row.Cells("invoiceItemFPA").ColumnIndex Then
                 If row.Cells("invoiceItemFPA").Value Is System.DBNull.Value Then
-                    If Me.CheckBox1.Checked = False Then
+                    If Me.hasFPA = True Then
                         row.Cells("invoiceItemFPA").Value = fpaValues.First().ToString()
                     Else
                         row.Cells("invoiceItemFPA").Value = "0"

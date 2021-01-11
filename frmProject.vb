@@ -127,7 +127,24 @@
                 oform.invId = newId
                 oform.hasFPA = False
                 oform.Show()
+            ElseIf dgv.Rows(e.RowIndex).Cells("cancel").ColumnIndex = e.ColumnIndex Then
+                SaveChanges()
+                Dim newId As Integer = InsertInvoice(10, dgv.Rows(e.RowIndex).Cells("projectId").Value, "",
+                                                     dgv.Rows(e.RowIndex).Cells("projectName").Value)
+                Dim oform As New frmInvoiceData
+                oform.invId = newId
+                oform.hasFPA = True
+                oform.Show()
+            ElseIf dgv.Rows(e.RowIndex).Cells("acquisitionTitle").ColumnIndex = e.ColumnIndex Then
+                SaveChanges()
+                Dim newId As Integer = InsertInvoice(11, dgv.Rows(e.RowIndex).Cells("projectId").Value, "",
+                                                     dgv.Rows(e.RowIndex).Cells("projectName").Value)
+                Dim oform As New frmInvoiceData
+                oform.invId = newId
+                oform.hasFPA = False
+                oform.Show()
             End If
+
         End If
     End Sub
 

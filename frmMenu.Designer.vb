@@ -19,14 +19,15 @@ Partial Class frmMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button5 = New System.Windows.Forms.Button
-        Me.Button8 = New System.Windows.Forms.Button
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Button9 = New System.Windows.Forms.Button
-        Me.Button10 = New System.Windows.Forms.Button
-        Me.Button11 = New System.Windows.Forms.Button
-        Me.Button12 = New System.Windows.Forms.Button
-        Me.Button13 = New System.Windows.Forms.Button
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Button5
@@ -125,10 +126,20 @@ Partial Class frmMenu
         Me.Button13.Text = "Λειτουργία"
         Me.Button13.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(52, 159)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(24, 13)
+        Me.Label1.TabIndex = 16
+        Me.Label1.Text = "test"
+        '
         'frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.ClientSize = New System.Drawing.Size(1252, 730)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button13)
         Me.Controls.Add(Me.Button12)
         Me.Controls.Add(Me.Button11)
@@ -146,7 +157,9 @@ Partial Class frmMenu
         Me.Controls.SetChildIndex(Me.Button11, 0)
         Me.Controls.SetChildIndex(Me.Button12, 0)
         Me.Controls.SetChildIndex(Me.Button13, 0)
+        Me.Controls.SetChildIndex(Me.Label1, 0)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Button5 As System.Windows.Forms.Button
@@ -157,5 +170,5 @@ Partial Class frmMenu
     Friend WithEvents Button11 As System.Windows.Forms.Button
     Friend WithEvents Button12 As System.Windows.Forms.Button
     Friend WithEvents Button13 As System.Windows.Forms.Button
-
+    Friend WithEvents Label1 As Label
 End Class

@@ -60,7 +60,7 @@ Partial Class rptInvoice
         ReportDataSource2.Value = Me.tblInvoiceItemsBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "diadrasisProjects.rptInvoiceIKE.rdlc"
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "diadrasisProjects.rptInvoiceIKE-Sarri.rdlc"
         Me.ReportViewer1.LocalReport.ReportPath = ""
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.ReportViewer1.Name = "ReportViewer1"

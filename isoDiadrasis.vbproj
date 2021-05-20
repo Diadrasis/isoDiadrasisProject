@@ -46,7 +46,7 @@
     <SuiteName>Διάδρασις</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>13</ApplicationRevision>
+    <ApplicationRevision>15</ApplicationRevision>
     <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -692,6 +692,7 @@
     <EmbeddedResource Include="rptInspectionSceduleE821.resx">
       <DependentUpon>rptInspectionSceduleE821.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptInvoiceIKE-Sarri.rdlc" />
     <EmbeddedResource Include="rptInvoiceVassilopoulos.rdlc" />
     <EmbeddedResource Include="rptInvoiceIKE.rdlc" />
     <EmbeddedResource Include="rptInvoiceOE.rdlc" />

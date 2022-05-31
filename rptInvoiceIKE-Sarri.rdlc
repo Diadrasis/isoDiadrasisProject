@@ -581,7 +581,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox75</rd:DefaultName>
         <Top>0.92639cm</Top>
-        <Left>18.16312cm</Left>
+        <Left>15.35854cm</Left>
         <Height>0.6cm</Height>
         <Width>1.95811cm</Width>
         <ZIndex>19</ZIndex>
@@ -636,7 +636,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>   ΕΙΔΟΣ ΠΑΡΑΣΤΑΤΙΚΟΥ                                                                                  ΣΕΙΡΑ                                             ΑΡΙΘΜΟΣ                               ΗΜΕΡΟΜΗΝΙΑ</Value>
+                <Value>   ΕΙΔΟΣ ΠΑΡΑΣΤΑΤΙΚΟΥ                                                                                  ΣΕΙΡΑ                 ΑΡΙΘΜΟΣ                    MAΡK                          ΗΜΕΡΟΜΗΝΙΑ</Value>
                 <Style>
                   <FontFamily>Century Gothic</FontFamily>
                 </Style>
@@ -2244,6 +2244,40 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="mark">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!mark.Value, "DataSet1")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>mark</rd:DefaultName>
+        <Top>0.96167cm</Top>
+        <Left>17.89854cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.45954cm</Width>
+        <ZIndex>35</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>10.8764cm</Height>
     <Style />
@@ -2700,10 +2734,14 @@
           <DataField>payComments</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="mark">
+          <DataField>mark</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>diadrasisProjectsDBDataSet</rd:DataSetName>
-        <rd:SchemaPath>E:\Projects\Διάδρασις\isoDiadrasis\vsProject\isoDiadrasisProject\diadrasisProjectsDBDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>G:\Projects\Διάδρασις\isoDiadrasis\vsProject\isoDiadrasisProject\diadrasisProjectsDBDataSet.xsd</rd:SchemaPath>
         <rd:TableName>rptInvoice</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
